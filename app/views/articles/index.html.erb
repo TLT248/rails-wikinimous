@@ -1,0 +1,15 @@
+<header class="d-flex justify-content-between m-3">
+  <h2>Wikinimous</h2>
+  <a href="articles/new" class="btn btn-primary">New article</a>
+</header>
+
+<div class="container">
+
+  <% @articles.each do |article| %>
+    <div>
+      <h3><%= link_to article.title, article_path(article) %></h3>
+      <p><%= article.content[0..80] %> ...</p>
+    </div>
+  <% end %>
+
+</div>
